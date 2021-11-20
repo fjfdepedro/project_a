@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe Merchant, type: :model do
-  let(:fee) { build(:fee_configurations_type) }
+  let(:fee) { create(:fee_configurations_type) }
 
   subject {
     described_class.new(name: 'Merchant name',
