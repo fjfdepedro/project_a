@@ -1,4 +1,4 @@
-# spec/models/merchant.rb
+# spec/models/fee_configurations_type_spec.rb
 
 require 'rails_helper'
 
