@@ -1,5 +1,5 @@
 
 class FeeConfigurationsType < ActiveRecord::Base
   has_many :fee_configurations
-  belongs_to :merchant
+  has_many :merchants
 end
