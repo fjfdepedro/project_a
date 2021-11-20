@@ -3,7 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe FeeConfigurationsType, type: :model do
-
   subject {
     described_class.new(name: 'Fee config type name',
                         description: 'Fee config type description')
