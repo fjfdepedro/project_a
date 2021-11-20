@@ -4,5 +4,5 @@ class Shopper < ActiveRecord::Base
 
   has_many :orders
 
-  attr_accessible :name, :email, :nif
+  attr_accessor :name, :email, :nif
 end

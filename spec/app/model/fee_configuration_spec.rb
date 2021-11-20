@@ -3,13 +3,13 @@
 require 'rails_helper'
 
 RSpec.describe FeeConfiguration, type: :model do
-  let(:fee) { create(:fee_configurations_type) }
+  let(:fee_configurations_type_item) { create(:fee_configurations_type) }
 
   subject {
     described_class.new(fee_percentage: 1.0,
                         min_amount: 0,
                         max_amount: 50,
-                        fee_configurations_type: fee)
+                        fee_configurations_type: fee_configurations_type_item)
   }
 
   describe 'Associations' do

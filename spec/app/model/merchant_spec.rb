@@ -3,13 +3,13 @@
 require 'rails_helper'
 
 RSpec.describe Merchant, type: :model do
-  let(:fee) { create(:fee_configurations_type) }
+  let(:fee_configurations_type_item) { create(:fee_configurations_type) }
 
   subject {
     described_class.new(name: 'Merchant name',
                         email: 'info@flatley-rowe.com',
                         cif: '98657242F',
-                        fee_configurations_type: fee)
+                        fee_configurations_type: fee_configurations_type_item)
   }
 
   describe 'Associations' do
