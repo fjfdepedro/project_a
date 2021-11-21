@@ -1,4 +1,4 @@
-# spec/models/merchant.rb
+# spec/models/order.rb
 
 require 'rails_helper'
 
