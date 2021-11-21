@@ -3,6 +3,6 @@ class Order < ActiveRecord::Base
   validates :status, presence: true, status: true
   belongs_to :merchant
   belongs_to :shopper
+  has_one :disbursement
 
-  attr_accessor :amount, :status
 end
