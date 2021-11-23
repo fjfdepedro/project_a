@@ -23,5 +23,8 @@ RSpec.describe Disbursement, type: :model do
     it 'is valid with valid attributes' do
       expect(subject).to be_valid
     end
+    %i[processed_at commentable value status].each do |field|
+      it { expect(subject).to validate_presence_of(field) }
+    end
   end
 end
