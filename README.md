@@ -8,6 +8,12 @@ El endpoint para obtener los reembolsos (Disbursement) tiene su lógica en un se
 
 Hay un job que se podría ejecutar mediante un resque scheduler todos los lunes y de esta manera obtener los reembolsos (Disbursement) 
 
-(Falta el modelo de Audit y la configuración del resque scheduler)
+Los controladores utilizan servicios y cada uno tiene sus tests.
+
+(Falta el modelo de Audit y la configuración del resque scheduler, esta planteada la solución pero falta implementar algún método)
+
+El projecto va con webpack, aunque no haría falta para un api rest.
+Se podrían crear indices para mejorar el rendimiento.
+
 
 
