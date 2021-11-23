@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+El desarrollo consta de los 5 modelos en total, Merchant, Shopper, Order, Disbursement (donse se quedan guardados los reembolsos por cada orden), Fee Configuration Type (será un modelo donde se podrá guardar el tipo de reembolso que se va a aplicar a cada Merchant), Fee Configuration (son las diferentes configuraciones de reembolso que se puede aplicar a las ordenes de un merchant con una Fee Configuration Type determinada) y Audit (donde se guarda un log de cada uno de los procesos de creación de un reembolso a partir de una orden).
 
-Things you may want to cover:
+Estos modelos tienen test unitarios
 
-* Ruby version
+El endpoint para obtener los reembolsos (Disbursement) tiene su lógica en un servicio y se va a serializar en JSON mediante un schema. Tiene un test de integración que valida una respuesta correcta y se valida el schema contrato del json serializado.
 
-* System dependencies
+Hay un job que se podría ejecutar mediante un resque scheduler todos los lunes y de esta manera obtener los reembolsos (Disbursement) 
 
-* Configuration
+Los controladores utilizan servicios y cada uno tiene sus tests.
 
-* Database creation
+(Falta el modelo de Audit y la configuración del resque scheduler, esta planteada la solución pero falta implementar algún método)
 
-* Database initialization
+El projecto va con webpack, aunque no haría falta para un api rest.
+Se podrían crear indices para mejorar el rendimiento.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
